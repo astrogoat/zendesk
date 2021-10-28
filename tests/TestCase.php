@@ -2,9 +2,9 @@
 
 namespace Astrogoat\Zendesk\Tests;
 
+use Astrogoat\Zendesk\ZendeskServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Astrogoat\Zendesk\ZendeskServiceProvider;
 
 class TestCase extends Orchestra
 {

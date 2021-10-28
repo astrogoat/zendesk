@@ -3,7 +3,6 @@
 namespace Astrogoat\Zendesk\Settings;
 
 use Helix\Lego\Settings\AppSettings;
-use Astrogoat\Zendesk\Actions\ZendeskAction;
 
 class ZendeskSettings extends AppSettings
 {
