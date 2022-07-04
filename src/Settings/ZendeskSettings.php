@@ -7,25 +7,25 @@ use Helix\Lego\Settings\AppSettings;
 class ZendeskSettings extends AppSettings
 {
     public string $app_id;
-    public string $widget_background_color_hex;
-    public string $widget_text_color_hex;
+    public string $widget_background_color;
+    public string $widget_text_color;
     public string $widget_offset_left;
     public bool $contact_options;
-    public string $chat_top_bar_background_color_hex;
-    public string $chat_top_bar_text_color_hex;
-    public string $chat_background_color_hex;
+    public string $chat_top_bar_background_color;
+    public string $chat_top_bar_text_color;
+    public string $chat_background_color;
     public bool $enable_departments;
     public string $department;
 
     protected array $rules = [
         'app_id' => ['required'],
-        'widget_background_color_hex' => ['nullable'],
-        'widget_text_color_hex' => ['nullable'],
+        'widget_background_color' => ['nullable'],
+        'widget_text_color' => ['nullable'],
         'widget_offset_left'=>['nullable'],
         'contact_options'=>['required'],
-        'chat_top_bar_background_color_hex' => ['nullable'],
-        'chat_top_bar_text_color_hex' => ['nullable'],
-        'chat_background_color_hex' => ['nullable'],
+        'chat_top_bar_background_color' => ['nullable'],
+        'chat_top_bar_text_color' => ['nullable'],
+        'chat_background_color' => ['nullable'],
         'enable_departments' => ['nullable'],
         'department' => ['nullable'],
     ];
