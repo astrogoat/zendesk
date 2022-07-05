@@ -5,7 +5,7 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/astrogoat/zendesk/Check%20&%20fix%20styling?label=code%20style)](https://github.com/astrogoat/zendesk/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/astrogoat/zendesk.svg?style=flat-square)](https://packagist.org/packages/astrogoat/zendesk)
 
-A Zendesk app for Stratum.
+A Zendesk app for Strata.
 
 ## Installation
 
