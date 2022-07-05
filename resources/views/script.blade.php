@@ -6,7 +6,7 @@
             src="https://static.zdassets.com/ekr/snippet.js?key={{ settings(Astrogoat\Zendesk\Settings\ZendeskSettings::class, 'app_id') }}"></script>
 
     <script type="text/javascript">
-        const dep = '<?php echo json_encode(explode(',',settings(Astrogoat\Zendesk\Settings\ZendeskSettings::class, "department"))) ?>'
+        const dep = '<?php echo json_encode(explode(',',settings(Astrogoat\Zendesk\Settings\ZendeskSettings::class, "departments"))) ?>'
 
         const departments = JSON.parse(dep)
 

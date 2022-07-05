@@ -12,7 +12,7 @@ class AddDynamicFieldsZendeskSettings extends SettingsMigration
         $this->migrator->add('zendesk.contact_options',false);
         $this->migrator->add('zendesk.chat_top_bar_background_color', '');
         $this->migrator->add('zendesk.chat_top_bar_text_color', '');
-        $this->migrator->add('zendesk.department', '');
+        $this->migrator->add('zendesk.departments', '');
     }
 
     public function down()
