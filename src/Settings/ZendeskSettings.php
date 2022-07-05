@@ -40,16 +40,16 @@ class ZendeskSettings extends AppSettings
             ],
             [
                 'title' => 'Widget Customization',
-                'properties' => ['theme_color', 'widget_text_color', 'widget_offset_left']
+                'properties' => ['theme_color', 'widget_text_color', 'widget_offset_left'],
             ],
             [
                 'title' => 'Chat Customization',
-                'properties' => ['chat_top_bar_background_color', 'chat_top_bar_text_color']
+                'properties' => ['chat_top_bar_background_color', 'chat_top_bar_text_color'],
             ],
             [
                 'title' => 'Extra Settings',
-                'properties' => ['contact_options', 'departments']
-            ]
+                'properties' => ['contact_options', 'departments'],
+            ],
         ];
     }
 
@@ -62,9 +62,7 @@ class ZendeskSettings extends AppSettings
             'chat_top_bar_background_color' => 'The value should be a hex (#ffffff), changes the background of the header when chat is opened.',
             'chat_top_bar_text_color' => 'The value should be a hex (#ffffff), changes the text color of the launcher.',
             'contact_options' => 'This will enable a contact option.',
-            'departments' => 'This field should contain name of departments to enable seperated by a comma (hr,finance) and lowercase only.'
+            'departments' => 'This field should contain name of departments to enable seperated by a comma (hr,finance) and lowercase only.',
         ];
     }
-
-
 }
