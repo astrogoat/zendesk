@@ -62,7 +62,7 @@ class ZendeskSettings extends AppSettings
             'chat_top_bar_background_color' => 'The value should be a hex (#ffffff), changes the background of the header when chat is opened.',
             'chat_top_bar_text_color' => 'The value should be a hex (#ffffff), changes the text color of the launcher.',
             'contact_options' => 'This will enable a contact option.',
-            'department' => 'This field should contain name of departments to enable seperated by a comma (hr,finance) and lowercase only.'
+            'department' => 'This field should contain name of departments to enable seperated by a comma (hr, finance) and lowercase only.'
         ];
     }
 
