@@ -7,8 +7,16 @@
 
     <script type="text/javascript">
         const dep = '<?php echo json_encode(explode(',',settings(Astrogoat\Zendesk\Settings\ZendeskSettings::class, "departments"))) ?>'
+        let selectedDep = '<?php echo settings(Astrogoat\Zendesk\Settings\ZendeskSettings::class, "selected_department") ?>'
 
         const departments = JSON.parse(dep)
+        let selected = null;
+
+        if(selectedDep.length>0){
+                 selected = `select: "${selectedDep}"`
+        }else{
+            selected = '';
+        }
 
         window.zESettings = {
             webWidget: {
@@ -25,8 +33,8 @@
                 },
                 chat: {
                     departments: {
-                        enabled: departments, //will hide the Department dropdown
-                        // select: 'Brooklyn Agents' //selects Brooklyn agents department in the background
+                        enabled: departments,
+                        selected
                     }
                 }
             }

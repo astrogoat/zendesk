@@ -14,6 +14,7 @@ class ZendeskSettings extends AppSettings
     public string $chat_top_bar_background_color;
     public string $chat_top_bar_text_color;
     public string $departments;
+    public string $selected_department;
 
     protected array $rules = [
         'app_id' => ['required'],
@@ -24,6 +25,7 @@ class ZendeskSettings extends AppSettings
         'chat_top_bar_background_color' => ['nullable', 'regex:/^(#(?:[0-9a-f]{2}){2,4}|#[0-9a-f]{3}|(?:rgba?|hsla?)\((?:\d+%?(?:deg|rad|grad|turn)?(?:,|\s)+){2,3}[\s\/]*[\d\.]+%?\))$/i'],
         'chat_top_bar_text_color' => ['nullable', 'regex:/^(#(?:[0-9a-f]{2}){2,4}|#[0-9a-f]{3}|(?:rgba?|hsla?)\((?:\d+%?(?:deg|rad|grad|turn)?(?:,|\s)+){2,3}[\s\/]*[\d\.]+%?\))$/i'],
         'departments' => ['nullable'],
+        'selected_department' => ['nullable'],
     ];
 
     public function description(): string
@@ -48,7 +50,7 @@ class ZendeskSettings extends AppSettings
             ],
             [
                 'title' => 'Extra Settings',
-                'properties' => ['contact_options', 'departments']
+                'properties' => ['contact_options', 'departments','selected_department']
             ]
         ];
     }
@@ -62,7 +64,8 @@ class ZendeskSettings extends AppSettings
             'chat_top_bar_background_color' => 'The value should be a hex (#ffffff), changes the background of the header when chat is opened.',
             'chat_top_bar_text_color' => 'The value should be a hex (#ffffff), changes the text color of the launcher.',
             'contact_options' => 'This will enable a contact option.',
-            'departments' => 'This field should contain name of departments to enable seperated by a comma (hr,finance) and lowercase only.'
+            'departments' => 'This field should contain name of departments to enable separated by a comma (hr,finance) and lowercase only.',
+            'selected_department' => 'This field should contain name of department to set by default.'
         ];
     }
 
