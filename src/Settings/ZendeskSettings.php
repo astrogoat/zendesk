@@ -50,8 +50,8 @@ class ZendeskSettings extends AppSettings
             ],
             [
                 'title' => 'Extra Settings',
-                'properties' => ['contact_options', 'departments','selected_department']
-            ]
+                'properties' => ['contact_options', 'departments','selected_department'],
+            ],
         ];
     }
 
@@ -65,7 +65,7 @@ class ZendeskSettings extends AppSettings
             'chat_top_bar_text_color' => 'The value should be a hex (#ffffff), changes the text color of the launcher.',
             'contact_options' => 'This will enable a contact option.',
             'departments' => 'This field should contain name of departments to enable separated by a comma (hr,finance) and lowercase only.',
-            'selected_department' => 'This field should contain name of department to set by default.'
+            'selected_department' => 'This field should contain name of department to set by default.',
 
         ];
     }
