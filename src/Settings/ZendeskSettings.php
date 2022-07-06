@@ -42,11 +42,11 @@ class ZendeskSettings extends AppSettings
             ],
             [
                 'title' => 'Widget Customization',
-                'properties' => ['theme_color', 'widget_text_color', 'widget_offset_left']
+                'properties' => ['theme_color', 'widget_text_color', 'widget_offset_left'],
             ],
             [
                 'title' => 'Chat Customization',
-                'properties' => ['chat_top_bar_background_color', 'chat_top_bar_text_color']
+                'properties' => ['chat_top_bar_background_color', 'chat_top_bar_text_color'],
             ],
             [
                 'title' => 'Extra Settings',
@@ -66,8 +66,7 @@ class ZendeskSettings extends AppSettings
             'contact_options' => 'This will enable a contact option.',
             'departments' => 'This field should contain name of departments to enable separated by a comma (hr,finance) and lowercase only.',
             'selected_department' => 'This field should contain name of department to set by default.'
+
         ];
     }
-
-
 }
