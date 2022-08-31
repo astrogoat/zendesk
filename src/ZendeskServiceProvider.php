@@ -4,6 +4,7 @@ namespace Astrogoat\Zendesk;
 
 use Astrogoat\Zendesk\Settings\ZendeskSettings;
 use Helix\Lego\Apps\App;
+use Helix\Lego\Apps\Services\IncludeFrontendViews;
 use Helix\Lego\LegoManager;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -18,7 +19,9 @@ class ZendeskServiceProvider extends PackageServiceProvider
                 ->settings(ZendeskSettings::class)
                 ->migrations([
                     __DIR__ . '/../database/migrations/settings',
-                ]);
+                ])->includeFrontendViews(function (IncludeFrontendViews $views) {
+                    return $views->addToEnd(['zendesk::script']);
+                });
         });
     }
 
@@ -33,6 +36,7 @@ class ZendeskServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('zendesk')
-            ->hasViews();
+            ->hasViews()
+            ->hasConfigFile();
     }
 }
