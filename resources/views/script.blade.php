@@ -38,5 +38,5 @@
             }
         };
     </script>
-    <!-- [Zendesk] Start -->
+    <!-- [Zendesk] End -->
 @endif
