@@ -2,6 +2,7 @@
 
 namespace Astrogoat\Zendesk;
 
+use Helix\Lego\Apps\AppToken;
 use Astrogoat\Zendesk\Settings\ZendeskSettings;
 use Helix\Lego\Apps\App;
 use Helix\Lego\Apps\Services\IncludeFrontendViews;
@@ -21,7 +22,14 @@ class ZendeskServiceProvider extends PackageServiceProvider
                     __DIR__ . '/../database/migrations/settings',
                 ])->includeFrontendViews(function (IncludeFrontendViews $views) {
                     return $views->addToEnd(['zendesk::script']);
-                });
+                })
+                ->tokens([
+                    AppToken::name('Open Zendesk chat widget')
+                        ->type(AppToken::TYPE_TEXT)
+                        ->key('open-messenger')
+                        ->value('zE("messenger", "open");')
+                        ->description('Opens the messenger'),
+                ]);
         });
     }
 
